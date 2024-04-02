@@ -40,13 +40,13 @@ body {
   display: grid;
   place-items: center;
   padding: 50px 0px;
-  background: linear-gradient(45deg, rgba(0, 238, 255, 0.842), rgba(255, 0, 149, 0.651)), url(../img/bg.jpg);
+  background: linear-gradient(45deg, rgba(0, 238, 255, 0.842), rgba(255, 0, 149, 0.651)), url('../img/bg.avif');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-#AllInBody #ContentWarpper {
+#AllInBody #ContentWrapper {
   width: 25vw;
   min-height: 70vh;
   border-radius: 10px;
@@ -72,20 +72,20 @@ body {
   transition: 0.2s;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer {
+#AllInBody #ContentWrapper #WholeCardContainer {
   width: 100%;
   text-align: center;
   padding: 10px 0px;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicImg {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicImg {
   width: 150px;
   height: 150px;
   margin: 10px auto;
   overflow: hidden;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicImg img {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicImg img {
   width: 100%;
   height: 100%;
   border-radius: 100%;
@@ -97,18 +97,18 @@ body {
   display: inline-block;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicDesc {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicDesc {
   margin: 0px 0px 20px 0px;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicDesc h2 {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicDesc h2 {
   font-size: 2rem;
   font-family: 'Reggae One', cursive;
   color: #fc0093;
   text-shadow: 1px 1px 2px black;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicDesc p {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicDesc p {
   font-weight: 900;
   padding: 5px 10px;
   margin: auto;
@@ -116,7 +116,7 @@ body {
   color: white;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicControls {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicControls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,22 +128,22 @@ body {
           align-items: center;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicControls div {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicControls div {
   cursor: pointer;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicControls div:nth-child(odd) i {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicControls div:nth-child(odd) i {
   border: none;
   border: 2px solid transparent;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicControls div:nth-child(odd) i:hover {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicControls div:nth-child(odd) i:hover {
   border-color: #ff0080;
   background: none;
   color: #ff0080;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicControls div i {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicControls div i {
   font-size: 1.1rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -154,12 +154,12 @@ body {
   border: 2px solid #ff0080;
 }
 
-#AllInBody #ContentWarpper #WholeCardContainer #MusicControls div i:hover {
+#AllInBody #ContentWrapper #WholeCardContainer #MusicControls div i:hover {
   background: #ff0080;
   color: white;
 }
 
-#AllInBody #ContentWarpper #Progress_elements {
+#AllInBody #ContentWrapper #Progress_elements {
   padding: 10px 0px;
   background: -webkit-gradient(linear, right top, left top, from(#00eeff), to(#ff006a));
   background: linear-gradient(to left, #00eeff, #ff006a);
@@ -170,7 +170,7 @@ body {
   text-shadow: 1px 1px 1px white;
 }
 
-#AllInBody #ContentWarpper #Progress_elements #Progressduration {
+#AllInBody #ContentWrapper #Progress_elements #Progressduration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,7 +181,7 @@ body {
           align-items: center;
 }
 
-#AllInBody #ContentWarpper #Progress_elements #ProgressMeterContainer {
+#AllInBody #ContentWrapper #Progress_elements #ProgressMeterContainer {
   width: 90%;
   height: 7px;
   background: white;
@@ -190,7 +190,7 @@ body {
   cursor: pointer;
 }
 
-#AllInBody #ContentWarpper #Progress_elements #ProgressMeterContainer #ProgrssMeterChild {
+#AllInBody #ContentWrapper #Progress_elements #ProgressMeterContainer #ProgressMeterChild {
   width: 0%;
   height: 100%;
   background: linear-gradient(45deg, #00e1ff, #ff0077);
@@ -237,7 +237,7 @@ footer a {
 }
 
 @media screen and (max-width: 1125px) {
-  #ContentWarpper {
+  #ContentWrapper {
     width: 40vw !important;
   }
 }
@@ -246,16 +246,16 @@ footer a {
   * {
     cursor: default !important;
   }
-  #ContentWarpper {
+  #ContentWrapper {
     width: 50vw !important;
   }
 }
 
 @media screen and (max-width: 567px) {
-  #ContentWarpper {
+  #ContentWrapper {
     width: 90vw !important;
   }
-  #ContentWarpper #MusicDesc p {
+  #ContentWrapper #MusicDesc p {
     padding: 5px 2px !important;
   }
 }

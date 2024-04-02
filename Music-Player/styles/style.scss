@@ -30,15 +30,14 @@ body {
   place-items: center;
   padding: 50px 0px;
   background: linear-gradient(
-      45deg,
-      rgba(0, 238, 255, 0.842),
-      rgba(255, 0, 149, 0.651)
-    ),
-    url(../img/bg.jpg);
+    45deg,
+    rgb(0, 225, 255),
+    rgb(255, 0, 119)
+  ),url('../img/bg.avif');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  #ContentWarpper {
+  #ContentWrapper {
     width: 25vw;
     min-height: 70vh;
     border-radius: 10px;
@@ -139,7 +138,7 @@ body {
         border-radius: 50px;
         margin: 20px auto 5px auto;
         cursor: pointer;
-        #ProgrssMeterChild {
+        #ProgressMeterChild {
           width: 0%;
           height: 100%;
           background: linear-gradient(

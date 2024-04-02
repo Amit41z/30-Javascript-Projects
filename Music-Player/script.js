@@ -1,4 +1,4 @@
-const mainCard = document.querySelector("#ContentWarpper");
+const mainCard = document.querySelector("#ContentWrapper");
 const songImg = document.querySelector("#SongImg");
 const controlButtons = document.querySelector(".control");
 const currentYear = new Date().getFullYear();
@@ -13,7 +13,7 @@ const songImgAtTheTop = document.querySelector("img");
 
 let startDuration = document.querySelector("#Start");
 const endDuration = document.querySelector("#End");
-const meter = document.querySelector("#ProgrssMeterChild");
+const meter = document.querySelector("#ProgressMeterChild");
 const progressBar = document.querySelector("#ProgressMeterContainer");
 
 let isPlaying = false;
@@ -22,63 +22,33 @@ let index = 0;
 const songDataBase = [
   {
     songSrc: "./music/music1.mp3",
-    title: "Assalamu Alaika",
-    artist: "Maher Zain",
-    imgSrc: "./img/music1.jpg",
+    title: "Raghunandan",
+    artist: "Prasanth Varma",
+    imgSrc: "./img/music1.avif",
   },
   {
     songSrc: "./music/music2.mp3",
-    title: "Deen Islam",
-    artist: "Mohamed Tarek",
+    title: "Shape Of You",
+    artist: "Ed Sheeran",
     imgSrc: "./img/music2.jpg",
   },
   {
     songSrc: "./music/music3.mp3",
-    title: "Mix",
-    artist: "Mohammad Tarek",
-    imgSrc: "./img/music3.jpg",
+    title: "Apa fer Milaange",
+    artist: "Savi Kahlon",
+    imgSrc: "./img/music3.webp",
   },
   {
     songSrc: "./music/music4.mp3",
-    title: "Mohammad Nabina",
-    artist: "Unknown",
+    title: "Thinking Out Loud",
+    artist: "Ed Sheeran",
     imgSrc: "./img/music4.jpg",
   },
   {
     songSrc: "./music/music5.mp3",
-    title: "Asslamu Alaika",
-    artist: "Maher Zain",
+    title: "Prabh-9:45 song",
+    artist: "Rooh Sandhu & Jay Trak",
     imgSrc: "./img/music5.jpg",
-  },
-  {
-    songSrc: "./music/music6.mp3",
-    title: "Maulaya Salli",
-    artist: "Sami Yusuf",
-    imgSrc: "./img/music6.jpg",
-  },
-  {
-    songSrc: "./music/music7.mp3",
-    title: "Lakhon Salam",
-    artist: "Atif Aslam",
-    imgSrc: "./img/music7.jpg",
-  },
-  {
-    songSrc: "./music/music8.mp3",
-    title: "Assalamu Alaika",
-    artist: "Maher zain",
-    imgSrc: "./img/music1.jpg",
-  },
-  {
-    songSrc: "./music/music9.mp3",
-    title: "Maulaya Salli",
-    artist: "Mix",
-    imgSrc: "./img/music6.jpg",
-  },
-  {
-    songSrc: "./music/music10.mp3",
-    title: "Inshallah",
-    artist: "Maher Zain",
-    imgSrc: "./img/music10.jpg",
   },
 ];
 
@@ -139,12 +109,20 @@ const timeStamp = (event) => {
   const full_minute = Math.floor(duration / 60);
   const start_second = Math.floor(currentTime % 60);
   const start_minute = Math.floor(currentTime / 60);
-  const totalDuration = `${full_minute} : ${full_second}`;
-  const currenDuration = `${start_minute} : ${start_second}`;
+  // const totalDuration = `${full_minute} : ${full_second}`;
+  // const currenDuration = `${start_minute} : ${start_second}`;
+
+  // Ensure two digits for minutes and seconds
+  const formatDigits = (value) => value.toString().padStart(2, '0');
+
+  const totalDuration = `${formatDigits(full_minute)} : ${formatDigits(full_second)}`;
+  const currentDuration = `${formatDigits(start_minute)} : ${formatDigits(start_second)}`;
+
+
   if (duration) {
     endDuration.textContent = totalDuration;
   }
-  startDuration.textContent = currenDuration;
+  startDuration.textContent = currentDuration;
   const percentage = (currentTime / duration) * 100;
   meter.style.width = `${percentage}%`;
 };
